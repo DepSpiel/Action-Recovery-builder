@@ -1,4 +1,4 @@
-name: Android-Recovery-Builder
+name: Android-Recovery-Builder 2
 
 on:
   workflow_dispatch:
@@ -6,39 +6,39 @@ on:
       MANIFEST_TYPE:
         description: 'MANIFEST_TYPE'
         required: true
-        default: 'omni'
+        default: 'aosp'
       MANIFEST_URL:
         description: 'MANIFEST_URL'
         required: true
-        default: 'https://github.com/SHRP/platform_manifest_twrp_omni.git'
+        default: 'https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git'
       MANIFEST_BRANCH:
         description: 'MANIFEST_BRANCH'
         required: true
-        default: 'v3_10.0'
+        default: 'twrp-11'
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/SGCMarkus/android_device_lge_flashlmdd-twrp'
+        default: 'https://github.com/TeamWin/android_device_google_crosshatch/tree'
       DEVICE_COMMON_URL:
         description: 'DEVICE_COMMON_URL'
         required: true
-        default: 'https://github.com/SGCMarkus/android_device_lge_sm8150-common-twrp'
+        default: 'https://github.com/TeamWin/android_device_google_crosshatch'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
-        default: 'android-10'
+        default: 'android-11'
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
-        default: 'device/lge/flashlmdd'
+        default: 'device/google/crosshatch'
       DEVICE_COMMON_PATH:
         description: 'DEVICE_COMMON_PATH'
         required: true
-        default: 'device/lge/sm8150-common'
+        default: 'device/google/blueline-common'
       DEVICE_NAME:
         description: 'DEVICE_NAME'
         required: true
-        default: 'flashlmdd'
+        default: 'blueline'
 
 jobs:
   build:
@@ -78,8 +78,8 @@ jobs:
         mkdir workspace
         cd workspace
         echo "::set-output name=pwd::$(pwd)"
-        git config --global user.name "Hikaru's Action-Build-Bot"
-        git config --global user.email "Android@teio.tk"
+        git config --global user.name "DepSpiel Action-Build-Bot"
+        git config --global user.email "depspiel@gmail.com"
         repo init --depth=1 -u ${{ github.event.inputs.MANIFEST_URL }} -b ${{ github.event.inputs.MANIFEST_BRANCH }}
       id: pwd
           
@@ -117,4 +117,4 @@ jobs:
         tag_name: ${{ github.run_id }}
         body: Recovery for ${{ github.event.inputs.DEVICE_NAME }}
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.Twrp }}

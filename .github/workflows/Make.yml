@@ -1,4 +1,4 @@
-name: Android-Recovery-Builder
+name: Android-Recovery-Builder 1
 
 on:
   workflow_dispatch:
@@ -10,7 +10,7 @@ on:
       MANIFEST_URL:
         description: 'MANIFEST_URL'
         required: true
-        default: 'git://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git'
+        default: 'https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git'
       MANIFEST_BRANCH:
         description: 'LIBRARY_BRANCH'
         required: true
@@ -18,15 +18,15 @@ on:
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/shuxiangfan/android_device_google_blueline-twrp'
+        default: 'https://github.com/TeamWin/android_device_google_crosshatch'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
-        default: 'twrp-11'
+        default: 'android-11'
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
-        default: 'device/google/blueline'
+        default: 'device/google/crosshatch'
       DEVICE_NAME:
         description: 'DEVICE_NAME'
         required: true

@@ -6,31 +6,31 @@ on:
       MANIFEST_TYPE:
         description: 'MANIFEST_TYPE'
         required: true
-        default: 'omni'
+        default: 'aosp'
       MANIFEST_URL:
         description: 'MANIFEST_URL'
         required: true
-        default: 'git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git'
+        default: 'git://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git'
       MANIFEST_BRANCH:
         description: 'LIBRARY_BRANCH'
         required: true
-        default: 'twrp-9.0'
+        default: 'twrp-11'
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/azwhikaru/twrp_device_xiaomi_archytas'
+        default: 'https://github.com/shuxiangfan/android_device_google_blueline-twrp'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
-        default: 'twrp-9.0'
+        default: 'twrp-11'
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
-        default: 'device/xiaomi/Archytas'
+        default: 'device/google/blueline'
       DEVICE_NAME:
         description: 'DEVICE_NAME'
         required: true
-        default: 'Archytas'
+        default: 'blueline'
 
 jobs:
   build:

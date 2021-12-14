@@ -6,19 +6,19 @@ on:
       MANIFEST_TYPE:
         description: 'MANIFEST_TYPE'
         required: true
-        default: 'aosp'
+        default: 'omni'
       MANIFEST_URL:
         description: 'MANIFEST_URL'
         required: true
-        default: 'https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git'
+        default: 'https://github.com/SHRP/platform_manifest_twrp_omni.git'
       MANIFEST_BRANCH:
         description: 'MANIFEST_BRANCH'
         required: true
-        default: 'twrp-11'
+        default: 'v3_11.0'
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/TeamWin/android_device_google_crosshatch/tree'
+        default: 'https://github.com/TeamWin/android_device_google_crosshatch'
       DEVICE_COMMON_URL:
         description: 'DEVICE_COMMON_URL'
         required: true
